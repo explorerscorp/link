@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Ajusta el ancho de la ventana gráfica al ancho del dispositivo para mejorar la experiencia en móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enlaces con botones</title>
+  <style>
+    /* RESET BÁSICO */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    /* CONTENEDOR DE BOTONES */
+    .botones-container {
+      display: flex;
+      flex-wrap: wrap;  /* Permite que los botones se ajusten de línea si no caben en una */
+      gap: 1rem;        /* Espacio entre botones */
+      justify-content: center;
+      max-width: 600px; /* Ancho máximo para que se vea bien centrado en pantallas grandes */
+      width: 100%;
+    }
+
+    /* ESTILOS DE LOS BOTONES */
+    .boton {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #007bff;    /* Azul al estilo "Bootstrap" */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-size: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .boton:hover {
+      background-color: #0056b3;    /* Tonalidad más oscura en hover */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* OPTIMIZACIÓN PARA DISPOSITIVOS MÓVILES */
+    @media (max-width: 600px) {
+      .botones-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .boton {
+        width: 80%;        /* Ancho para que sea más fácil de pulsar en móvil */
+        max-width: 300px;  /* Ancho máximo para no verse demasiado grande */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Mis Enlaces</h1>
+  <div class="botones-container">
+    <a href="https://explorerscorp.github.io/CRYTO/" class="boton">CRYTO</a>
+    <a href="https://explorerscorp.github.io/opbinary/" class="boton">OPBinary</a>
+    <a href="https://explorerscorp.github.io/price/" class="boton">Price</a>
+    <a href="https://explorerscorp.github.io/gestionriesgo/" class="boton">Gestión de Riesgo</a>
+  </div>
+
+</body>
+</html>
